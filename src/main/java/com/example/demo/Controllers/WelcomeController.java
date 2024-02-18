@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class WelcomeController 
 {
 	@GetMapping("/welcome")
-	public String getWelcomeMsg(@RequestHeader String name)
+	public String getWelcomeMsg()
 	{
-		String str = "Good Morning "+name;
+		String str = "Good Morning koushik";
 		
 		return str;
 	}
