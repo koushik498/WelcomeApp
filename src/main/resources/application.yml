@@ -1,0 +1,21 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+server:
+  port: 8080
+spring:
+  application:
+    name: Welcome-API
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+
+#this property used to register in the service registory if the port is other
+#than the 8761. if port is 8761 the application will be autoregiestered.
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
